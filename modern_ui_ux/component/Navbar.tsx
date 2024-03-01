@@ -36,12 +36,12 @@ const Navbar = () => {
             onClick={()=>setClose(!close)}
             />
             {close && (
-                <ul className='z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'>
+                <ul className='z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white'>
                     <li className='text-xl w-full my-2'> 
                         <Image  src={`${close ? 'close.svg' : 'menu.svg'}`} alt="icon" width={32} height={32} onClick={()=>setClose(false)}/>
                     </li>
                     {NAV_LINKS.map((nav, index) => (
-                        <Link href={nav.href} key={nav.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:underline underline-offset-4 decoration-dashed decoration-sky-500 mx-4  my-2 text-lg">
+                        <Link href={nav.href} key={nav.key} className="regular-16 text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:underline underline-offset-4 decoration-dashed decoration-sky-500 mx-4  my-2 text-lg">
                         {nav.label}
                 </Link> 
                     ))}
